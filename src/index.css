@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, Cambria, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Benchmark exact theme color mapping as defined by the custom layout */
+  --color-brand-blue: #1a7abf;
+  --color-brand-blue-dark: #0e5a8a;
+  --color-brand-blue-light: #2a9dd4;
+  --color-brand-blue-pale: #e6f4fb;
+  --color-brand-blue-mid: #6bbfe0;
+  --color-brand-dark: #1a1a1a;
+  --color-brand-gray: #4a4a4a;
+  --color-brand-gray-light: #f5f7fa;
+  --color-brand-gray-mid: #e4e8ed;
+  --color-brand-accent: #0c4f7a;
+
+  /* Keep other default Tailwind mappings and standard Indigo/Slate values */
+  --color-indigo-50: #f4f6fb;
+  --color-indigo-100: #e5edf9;
+  --color-indigo-200: #cbdcf2;
+  --color-indigo-300: #a3c2e7;
+  --color-indigo-400: #71a2da;
+  --color-indigo-500: #1a427a;
+  --color-indigo-600: #1a7abf; /* Map indigo to brand-blue color */
+  --color-indigo-700: #0e5a8a; /* Map to brand-blue-dark */
+  --color-indigo-800: #0c4f7a; /* Map to brand-accent */
+  --color-indigo-900: #0a2d47; /* Map to brand-darkest navy */
+  --color-indigo-950: #0a2d47;
+
+  /* Warm Custom Off-White Accent backings */
+  --color-slate-50: #ffffff;
+  --color-slate-100: #f5f7fa;
+  --color-slate-200: #e4e8ed;
+  --color-slate-350: #cbd1d6;
+}
+
+/* Global design systems */
+p {
+  line-height: 1.7 !important;
+}
+
+li {
+  line-height: 1.7 !important;
+}
+
+/* Elegant custom shadows and scale buttons */
+.btn-premium-interactive {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-premium-interactive:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 20px -5px rgba(0, 86, 226, 0.15);
+}
+.btn-premium-interactive:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Ensure the PNG logo rendered from the user's original file is perfectly sharp & high fidelity */
+.logo-pristine {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0); /* Force hardware accelerated rendering for subpixel smoothing */
+}
+
